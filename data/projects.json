@@ -1,0 +1,168 @@
+[
+  {
+    "id": "c-vpam",
+    "title": "C/VPAM — Privileged Access Management",
+    "slug": "c-vpam",
+    "company": "Imprivata",
+    "role": "Fullstack Engineer",
+    "period": { "start": "2024-09", "end": null },
+    "status": "active",
+    "description": "Migration and creation of new Privilege Access Services applications, introducing features aligned with the latest security and compliance standards.",
+    "highlights": [
+      "Modern UI redesign improving usability and user adoption",
+      "Security and compliance-aligned feature development",
+      "Automated testing implementation reducing production issues"
+    ],
+    "stack": ["Next.js", "Java", "Spring Boot", "MUI", "PostgreSQL"],
+    "categories": ["Enterprise", "Security", "PAM"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "caseStudy": null
+    },
+    "featured": true,
+    "public": false,
+    "image": null
+  },
+  {
+    "id": "actas-cr",
+    "title": "ActasCR",
+    "slug": "actas-cr",
+    "company": "WILLCR (Freelancer)",
+    "role": "Fullstack Engineer (Lead)",
+    "period": { "start": "2022-01", "end": null },
+    "status": "active",
+    "description": "SaaS platform for board meeting management that optimizes the entire lifecycle of corporate minutes: creation, review, approval, and archival.",
+    "highlights": [
+      "Reduced administrative overhead for organizations managing board meetings",
+      "End-to-end ownership: architecture, development, and maintenance"
+    ],
+    "stack": ["React", "Hapi.js", "AWS", "PostgreSQL"],
+    "categories": ["SaaS", "Web App", "Enterprise"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "caseStudy": null
+    },
+    "featured": true,
+    "public": false,
+    "image": null
+  },
+  {
+    "id": "metrixbi",
+    "title": "MetrixBi (COES)",
+    "slug": "metrixbi",
+    "company": "Akurey",
+    "role": "Fullstack Engineer",
+    "period": { "start": "2024-01", "end": "2024-08" },
+    "status": "completed",
+    "description": "AI-based application for social impact analysis, improving analysis accuracy for social sector organizations.",
+    "highlights": [
+      "Integrated AI/ML models for automated social impact measurement",
+      "Improved analysis accuracy over manual processes"
+    ],
+    "stack": ["React", "AWS", "PostgreSQL", "DynamoDB", "Flask"],
+    "categories": ["AI", "Data Analytics", "Social Impact", "Web App"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "caseStudy": null
+    },
+    "featured": true,
+    "public": false,
+    "image": null
+  },
+  {
+    "id": "starlight-app",
+    "title": "Starlight App",
+    "slug": "starlight-app",
+    "company": "Akurey",
+    "role": "Fullstack Engineer (Lead)",
+    "period": { "start": "2022-04", "end": "2023-06" },
+    "status": "completed",
+    "description": "ERP for collection and recycling operations. Led end-to-end development and implementation, streamlining operations and reducing processing time.",
+    "highlights": [
+      "Led end-to-end development from zero to production",
+      "Streamlined recycling collection operations",
+      "Reduced processing time significantly enhancing overall efficiency"
+    ],
+    "stack": ["React", "TypeScript", "Node.js", "MongoDB", "Docker", "Exago"],
+    "categories": ["ERP", "Enterprise", "Web App"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "caseStudy": null
+    },
+    "featured": true,
+    "public": false,
+    "image": null
+  },
+  {
+    "id": "microsoft-search",
+    "title": "Microsoft Search Site",
+    "slug": "microsoft-search",
+    "company": "Akurey",
+    "role": "Frontend Developer",
+    "period": { "start": "2021-10", "end": "2021-12" },
+    "status": "completed",
+    "description": "Frontend development for the Microsoft Search Site.",
+    "highlights": [
+      "Worked on a high-profile Microsoft product"
+    ],
+    "stack": ["React", "TypeScript", "Bootstrap"],
+    "categories": ["Frontend", "Enterprise"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "caseStudy": null
+    },
+    "featured": false,
+    "public": false,
+    "image": null
+  },
+  {
+    "id": "unimart-mobile",
+    "title": "Unimart Mobile App",
+    "slug": "unimart-mobile",
+    "company": "Akurey",
+    "role": "Fullstack Engineer",
+    "period": { "start": "2021-03", "end": "2021-10" },
+    "status": "completed",
+    "description": "E-commerce mobile application for Unimart, one of Costa Rica's major retailers. Optimized the sales process, increased sales, and improved app store ratings.",
+    "highlights": [
+      "Improved app store ratings through UX improvements",
+      "Optimized sales funnel increasing conversion"
+    ],
+    "stack": ["React Native", "Redux", "Firebase", "Shopify"],
+    "categories": ["Mobile", "E-commerce"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "caseStudy": null
+    },
+    "featured": false,
+    "public": false,
+    "image": null
+  },
+  {
+    "id": "whatsapp-agent",
+    "title": "WhatsApp AI Agent",
+    "slug": "whatsapp-agent",
+    "company": "Personal Project",
+    "role": "Creator",
+    "period": { "start": "2026-06", "end": null },
+    "status": "in-progress",
+    "description": "AI agent connected to WhatsApp that handles customer service conversations and generates orders automatically.",
+    "highlights": [],
+    "stack": [],
+    "categories": ["AI", "Agents", "WhatsApp", "SaaS"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "caseStudy": null
+    },
+    "featured": true,
+    "public": true,
+    "image": null
+  }
+]

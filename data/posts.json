@@ -1,0 +1,11 @@
+[
+  {
+    "id": "react-native-bridge-ios-android",
+    "title": "React Native Bridge for iOS and Android",
+    "url": "https://medium.com/@abhisheknalwaya/react-native-bridge-for-ios-and-android-43feb9712fcb",
+    "platform": "medium",
+    "excerpt": "A deep dive into how React Native bridges the gap between JavaScript and native iOS/Android code — useful for building custom native modules that go beyond what the standard library offers.",
+    "date": "2024-01-15",
+    "tags": ["React Native", "iOS", "Android", "Mobile"]
+  }
+]

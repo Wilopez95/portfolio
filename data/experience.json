@@ -1,0 +1,50 @@
+[
+  {
+    "id": "imprivata",
+    "company": "Imprivata",
+    "role": "Fullstack Software Engineer",
+    "period": { "start": "2024-09", "end": null },
+    "type": "full-time",
+    "current": true,
+    "description": "Development and maintenance of enterprise applications with strong performance, scalability, and security. Implementing quality practices and automated testing, improving software reliability and reducing production issues.",
+    "highlights": [
+      "Migration and creation of new Privilege Access Services (PAM) applications",
+      "Introduced features aligned with latest security and compliance standards",
+      "Enhanced usability with modern UI and automated testing"
+    ],
+    "stack": ["Next.js", "Java", "Spring Boot", "MUI", "PostgreSQL"],
+    "projects": ["c-vpam"]
+  },
+  {
+    "id": "willcr",
+    "company": "WILLCR",
+    "role": "Fullstack Software Engineer",
+    "period": { "start": "2022-01", "end": null },
+    "type": "freelance",
+    "current": true,
+    "description": "End-to-end development of web applications, database management, API integration, and application optimization for performance and scalability.",
+    "highlights": [
+      "Sole developer of a SaaS product used by multiple organizations",
+      "Optimized board meeting management, reducing administrative overhead"
+    ],
+    "stack": ["React", "Hapi.js", "AWS", "PostgreSQL"],
+    "projects": ["actas-cr"]
+  },
+  {
+    "id": "akurey",
+    "company": "Akurey",
+    "role": "Fullstack Software Engineer",
+    "period": { "start": "2019-07", "end": "2024-08" },
+    "type": "full-time",
+    "current": false,
+    "description": "End-to-end development of web applications, database management, API integration, and application optimization for performance and scalability.",
+    "highlights": [
+      "Developed an AI-based application for social impact analysis",
+      "Led end-to-end development of an ERP for collection and recycling operations",
+      "Frontend developer for Microsoft Search Site",
+      "Built e-commerce mobile app improving sales and app store ratings"
+    ],
+    "stack": ["React", "React Native", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "DynamoDB", "AWS", "Flask", "Docker", "Redux", "Firebase"],
+    "projects": ["metrixbi", "starlight-app", "microsoft-search", "unimart-mobile"]
+  }
+]

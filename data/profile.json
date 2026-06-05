@@ -1,0 +1,39 @@
+{
+  "name": "Wilson López Rubi",
+  "title": "Senior Fullstack Software Engineer",
+  "tagline": "Building scalable web products with 6+ years of experience in React, Node.js, Spring Boot, and AWS — now focused on AI-powered applications.",
+  "location": {
+    "city": "Puriscal",
+    "country": "Costa Rica",
+    "remote": true,
+    "label": "Costa Rica (Open to Remote)"
+  },
+  "contact": {
+    "email": "wilopez95@gmail.com",
+    "phone": "+506 89428204",
+    "linkedin": "https://www.linkedin.com/in/wilopez95",
+    "github": "https://github.com/Wilopez95",
+    "portfolio": null
+  },
+  "summary": "Full-Stack Software Engineer with 6+ years of experience designing, developing, and scaling enterprise and SaaS applications. Skilled in React, Node.js, Spring Boot, AWS, and PostgreSQL. Proven track record in building cloud-native solutions, migrating monoliths to microservices, and implementing CI/CD pipelines. Currently focused on AI-powered products, security, and data privacy.",
+  "yearsOfExperience": 6,
+  "languages": [
+    { "language": "Spanish", "level": "native" },
+    { "language": "English", "level": "C1 — Professional Working Proficiency" }
+  ],
+  "interests": [
+    "AI Agents",
+    "Data Privacy",
+    "AI Security",
+    "Ethical AI",
+    "Cloud Architecture",
+    "Open Source"
+  ],
+  "openToWork": true,
+  "preferredRoles": [
+    "Senior Fullstack Engineer",
+    "Senior Backend Engineer",
+    "AI Engineer",
+    "Lead Engineer"
+  ]
+}

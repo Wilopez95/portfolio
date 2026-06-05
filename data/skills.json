@@ -1,0 +1,84 @@
+{
+  "frontend": {
+    "label": "Frontend",
+    "items": [
+      { "name": "React", "level": "expert", "years": 6 },
+      { "name": "Next.js", "level": "advanced", "years": 3 },
+      { "name": "TypeScript", "level": "advanced", "years": 4 },
+      { "name": "Vue", "level": "intermediate", "years": 2 },
+      { "name": "Redux", "level": "advanced", "years": 5 },
+      { "name": "React Native", "level": "intermediate", "years": 2 },
+      { "name": "HTML5", "level": "expert", "years": 6 },
+      { "name": "CSS3", "level": "advanced", "years": 6 },
+      { "name": "MUI", "level": "intermediate", "years": 2 },
+      { "name": "Bootstrap", "level": "advanced", "years": 4 }
+    ]
+  },
+  "backend": {
+    "label": "Backend",
+    "items": [
+      { "name": "Node.js", "level": "expert", "years": 6 },
+      { "name": "Express", "level": "expert", "years": 5 },
+      { "name": "NestJS", "level": "intermediate", "years": 2 },
+      { "name": "Hapi.js", "level": "advanced", "years": 3 },
+      { "name": "Spring Boot", "level": "advanced", "years": 2 },
+      { "name": "Django", "level": "intermediate", "years": 2 },
+      { "name": "Flask", "level": "intermediate", "years": 2 },
+      { "name": "Ruby on Rails", "level": "intermediate", "years": 1 }
+    ]
+  },
+  "cloud": {
+    "label": "Cloud & DevOps",
+    "items": [
+      { "name": "AWS", "level": "advanced", "years": 4 },
+      { "name": "GCP", "level": "intermediate", "years": 1 },
+      { "name": "Docker", "level": "advanced", "years": 4 },
+      { "name": "Kubernetes", "level": "intermediate", "years": 2 },
+      { "name": "Jenkins", "level": "intermediate", "years": 2 },
+      { "name": "Serverless", "level": "intermediate", "years": 2 }
+    ]
+  },
+  "databases": {
+    "label": "Databases",
+    "items": [
+      { "name": "PostgreSQL", "level": "expert", "years": 5 },
+      { "name": "MongoDB", "level": "advanced", "years": 4 },
+      { "name": "DynamoDB", "level": "intermediate", "years": 2 },
+      { "name": "MySQL", "level": "advanced", "years": 4 },
+      { "name": "SQL Server", "level": "intermediate", "years": 2 },
+      { "name": "Firebase", "level": "intermediate", "years": 2 },
+      { "name": "GraphQL", "level": "intermediate", "years": 2 }
+    ]
+  },
+  "languages": {
+    "label": "Languages",
+    "items": [
+      { "name": "JavaScript", "level": "expert", "years": 6 },
+      { "name": "TypeScript", "level": "advanced", "years": 4 },
+      { "name": "Python", "level": "intermediate", "years": 3 },
+      { "name": "Java", "level": "intermediate", "years": 2 },
+      { "name": "Ruby", "level": "beginner", "years": 1 },
+      { "name": "SQL", "level": "advanced", "years": 5 },
+      { "name": "Go", "level": "beginner", "years": 1 }
+    ]
+  },
+  "tools": {
+    "label": "Tools & Other",
+    "items": [
+      { "name": "Git", "level": "expert", "years": 6 },
+      { "name": "Jira", "level": "advanced", "years": 5 },
+      { "name": "RabbitMQ", "level": "intermediate", "years": 2 },
+      { "name": "Shopify", "level": "intermediate", "years": 1 },
+      { "name": "Bitbucket", "level": "advanced", "years": 4 },
+      { "name": "Scrum", "level": "advanced", "years": 5 }
+    ]
+  },
+  "ai": {
+    "label": "AI & ML",
+    "items": [
+      { "name": "LLM Integration", "level": "learning", "years": 1 },
+      { "name": "AI Agents", "level": "learning", "years": 1 },
+      { "name": "Prompt Engineering", "level": "learning", "years": 1 }
+    ]
+  }
+}
