@@ -11,12 +11,12 @@
       "en": {
         "problem": "Boards and councils spend hours turning each session into formal minutes, and every organization has its own structure and language for them.",
         "solution": "Built a SaaS on React and hapi.js/Node.js on AWS with AI transcription of sessions and LLM agents that draft the minutes following each organization's structure and language. Added role- and privilege-based access, SQL migrations and AWS Cognito authentication.",
-        "result": "Used by multiple organizations to run the full lifecycle of their minutes: drafting, review, approval and archival. [TODO: métrica]"
+        "result": "Used by multiple organizations to run the full lifecycle of their minutes: drafting, review, approval and archival."
       },
       "es": {
         "problem": "Juntas directivas y concejos dedican horas a convertir cada sesión en un acta formal, y cada organización tiene su propia estructura y lenguaje.",
         "solution": "Construí un SaaS con React y hapi.js/Node.js en AWS, con transcripción de sesiones con IA y agentes LLM que redactan las actas según la estructura y el lenguaje de cada organización. Implementé acceso por roles y privilegios, migraciones SQL y autenticación con AWS Cognito.",
-        "result": "Lo usan múltiples organizaciones para todo el ciclo de sus actas: redacción, revisión, aprobación y archivo. [TODO: métrica]"
+        "result": "Lo usan múltiples organizaciones para todo el ciclo de sus actas: redacción, revisión, aprobación y archivo."
       }
     },
     "stack": ["React", "Hapi.js", "Node.js", "AWS", "AWS Cognito", "PostgreSQL", "LLM"],
@@ -44,12 +44,12 @@
       "en": {
         "problem": "Enterprises need to control and audit privileged access to critical systems, and the PAM platform's services had to be migrated and extended to meet current security and compliance standards.",
         "solution": "Build features end-to-end, from the web UI (Next.js, MUI) to Java/Spring Boot services, with secure-by-design practices: threat modeling, secure coding and security-focused code reviews, working with distributed teams in the US.",
-        "result": "New PAM applications and compliance-aligned features shipped, backed by automated testing. [TODO: métrica]"
+        "result": "New PAM applications and compliance-aligned features shipped, backed by automated testing."
       },
       "es": {
         "problem": "Las empresas necesitan controlar y auditar el acceso privilegiado a sistemas críticos, y los servicios de la plataforma PAM debían migrarse y ampliarse para cumplir los estándares actuales de seguridad y cumplimiento.",
         "solution": "Desarrollo features de punta a punta, desde la UI web (Next.js, MUI) hasta servicios en Java/Spring Boot, con prácticas secure-by-design: threat modeling, código seguro y code reviews enfocados en seguridad, junto a equipos distribuidos en EE. UU.",
-        "result": "Nuevas aplicaciones PAM y features alineadas con cumplimiento en producción, respaldadas por pruebas automatizadas. [TODO: métrica]"
+        "result": "Nuevas aplicaciones PAM y features alineadas con cumplimiento en producción, respaldadas por pruebas automatizadas."
       }
     },
     "stack": ["Next.js", "Java", "Spring Boot", "MUI", "PostgreSQL"],
@@ -76,12 +76,12 @@
       "en": {
         "problem": "Social sector organizations measured their social impact through largely manual analysis.",
         "solution": "Developed the application with React, Flask, AWS, PostgreSQL and DynamoDB, and integrated AI/ML models to automate impact measurement.",
-        "result": "Improved analysis accuracy over the manual process. [TODO: métrica]"
+        "result": "Improved analysis accuracy over the manual process."
       },
       "es": {
         "problem": "Organizaciones del sector social medían su impacto con análisis mayormente manuales.",
         "solution": "Desarrollé la aplicación con React, Flask, AWS, PostgreSQL y DynamoDB, e integré modelos de IA/ML para automatizar la medición de impacto.",
-        "result": "Mayor precisión del análisis frente al proceso manual. [TODO: métrica]"
+        "result": "Mayor precisión del análisis frente al proceso manual."
       }
     },
     "stack": ["React", "AWS", "PostgreSQL", "DynamoDB", "Flask"],
@@ -108,12 +108,12 @@
       "en": {
         "problem": "A collection and recycling operation needed an ERP to manage its day-to-day operations.",
         "solution": "Led end-to-end development, from zero to production, with React, TypeScript, Node.js, MongoDB and Docker, plus Exago for reporting.",
-        "result": "Streamlined collection operations and reduced processing time. [TODO: métrica]"
+        "result": "Streamlined collection operations and reduced processing time."
       },
       "es": {
         "problem": "Una operación de recolección y reciclaje necesitaba un ERP para gestionar su operación diaria.",
         "solution": "Lideré el desarrollo de punta a punta, desde cero hasta producción, con React, TypeScript, Node.js, MongoDB y Docker, más Exago para reportes.",
-        "result": "Operaciones de recolección más ágiles y menor tiempo de procesamiento. [TODO: métrica]"
+        "result": "Operaciones de recolección más ágiles y menor tiempo de procesamiento."
       }
     },
     "stack": ["React", "TypeScript", "Node.js", "MongoDB", "Docker", "Exago"],
@@ -140,12 +140,12 @@
       "en": {
         "problem": "The Microsoft Search Site needed frontend development.",
         "solution": "Built frontend features with React, TypeScript and Bootstrap.",
-        "result": "Contributed to a high-profile Microsoft product. [TODO: resultado]"
+        "result": "Contributed to a high-profile Microsoft product."
       },
       "es": {
         "problem": "El sitio de Microsoft Search necesitaba desarrollo frontend.",
         "solution": "Desarrollé features de frontend con React, TypeScript y Bootstrap.",
-        "result": "Contribución a un producto de alto perfil de Microsoft. [TODO: resultado]"
+        "result": "Contribución a un producto de alto perfil de Microsoft."
       }
     },
     "stack": ["React", "TypeScript", "Bootstrap"],
@@ -172,12 +172,12 @@
       "en": {
         "problem": "Unimart, one of Costa Rica's major retailers, needed to optimize the sales process in its e-commerce mobile app.",
         "solution": "Built the app with React Native, Redux, Firebase and Shopify, focusing on UX and the sales funnel.",
-        "result": "Higher sales and better app store ratings. [TODO: métrica]"
+        "result": "Higher sales and better app store ratings."
       },
       "es": {
         "problem": "Unimart, uno de los principales retailers de Costa Rica, necesitaba optimizar el proceso de venta en su app móvil de e-commerce.",
         "solution": "Desarrollé la app con React Native, Redux, Firebase y Shopify, con foco en la UX y el embudo de ventas.",
-        "result": "Más ventas y mejores calificaciones en las tiendas de apps. [TODO: métrica]"
+        "result": "Más ventas y mejores calificaciones en las tiendas de apps."
       }
     },
     "stack": ["React Native", "Redux", "Firebase", "Shopify"],
@@ -204,12 +204,12 @@
       "en": {
         "problem": "Customer-service conversations and orders over WhatsApp are handled by hand.",
         "solution": "Building an AI agent connected to WhatsApp that handles customer-service conversations and generates orders automatically.",
-        "result": "In progress. [TODO: resultado]"
+        "result": "In progress."
       },
       "es": {
         "problem": "Las conversaciones de servicio al cliente y los pedidos por WhatsApp se gestionan a mano.",
         "solution": "Estoy construyendo un agente de IA conectado a WhatsApp que atiende conversaciones de servicio al cliente y genera pedidos automáticamente.",
-        "result": "En progreso. [TODO: resultado]"
+        "result": "En progreso."
       }
     },
     "stack": [],

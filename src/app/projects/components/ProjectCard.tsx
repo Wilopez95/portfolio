@@ -9,39 +9,18 @@ function ProjectMedia({ project, spotlight }: { project: Project; spotlight: boo
     spotlight ? "aspect-[16/9] lg:aspect-auto lg:w-1/2 border-b lg:border-b-0 lg:border-r" : "aspect-[16/9] border-b"
   }`;
 
-  if (project.image) {
-    return (
-      <div className={frame}>
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          sizes={spotlight ? "(min-width: 1024px) 40vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"}
-          className="object-cover object-top"
-        />
-      </div>
-    );
-  }
-
-  // Placeholder until a screenshot is added (set `image` in data/projects.json)
-  const words = project.title.split(/[\s/—()-]+/).filter(Boolean);
-  const initials = (words.length > 1 ? words[0][0] + words[1][0] : words[0].slice(0, 2)).toUpperCase();
+  // Screenshots are optional: set `image` in data/projects.json to show one
+  if (!project.image) return null;
 
   return (
-    <div className={`${frame} flex items-center justify-center`} aria-hidden>
-      <div
-        className="absolute inset-0 opacity-60"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
-          WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
-        }}
+    <div className={frame}>
+      <Image
+        src={project.image}
+        alt={project.title}
+        fill
+        sizes={spotlight ? "(min-width: 1024px) 40vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"}
+        className="object-cover object-top"
       />
-      <span className="relative font-mono text-3xl font-semibold tracking-tight text-text-muted">
-        {initials}
-      </span>
     </div>
   );
 }

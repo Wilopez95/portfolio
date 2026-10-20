@@ -1,6 +1,5 @@
 import { LogoStroke, LogoNode, LogoSeal, LogoHorizontal } from "@/components/shared/Logo";
 
-// Preview-only page — not linked in nav, remove before launch
 export default function BrandPage() {
   return (
     <div className="min-h-screen pt-24 pb-20">
@@ -34,7 +33,6 @@ export default function BrandPage() {
           </p>
         </div>
 
-        {/* Option B */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <span className="text-xs font-bold tracking-widest uppercase text-text-muted">Option B</span>
@@ -55,7 +53,6 @@ export default function BrandPage() {
           </p>
         </div>
 
-        {/* Option C */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <span className="text-xs font-bold tracking-widest uppercase text-text-muted">Option C</span>
@@ -82,7 +79,6 @@ export default function BrandPage() {
           </p>
         </div>
 
-        {/* Horizontal lockups */}
         <div className="space-y-4">
           <p className="text-xs font-bold tracking-widest uppercase text-text-muted">Horizontal Lockups</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

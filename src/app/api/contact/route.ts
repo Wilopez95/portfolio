@@ -7,8 +7,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "All fields are required" }, { status: 400 });
   }
 
-  // When RESEND_API_KEY is set in .env.local, emails will send.
-  // Until then, log to console in dev.
   if (!process.env.RESEND_API_KEY) {
     console.log("[Contact Form]", { name, email, message });
     return NextResponse.json({ ok: true });
