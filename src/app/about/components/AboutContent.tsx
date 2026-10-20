@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLang } from "@/lib/LanguageContext";
 import { Bio } from "./Bio";
 import { ExperienceTimeline } from "./ExperienceTimeline";
@@ -13,6 +14,23 @@ type Experience = {
 };
 
 type SkillCategory = { label: string; items: { name: string; level: string; years: number }[] };
+
+const PHOTO_SRC: string | null = "/about/photo.jpg";
+
+function Portrait({ alt }: { alt: string }) {
+  return (
+    <div className="relative w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-2xl overflow-hidden border border-border bg-bg-surface">
+      {PHOTO_SRC ? (
+        <Image src={PHOTO_SRC} alt={alt} fill sizes="96px" className="object-cover" priority />
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center" aria-hidden>
+          <div className="absolute inset-0 bg-gradient-to-br from-bg-card to-bg-surface" />
+          <span className="relative font-mono text-2xl font-semibold tracking-tight text-text-muted">WL</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function AboutContent({
   experience,
@@ -28,13 +46,16 @@ export function AboutContent({
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
-        <div className="mb-16">
-          <p className="text-xs font-semibold text-text-muted tracking-widest uppercase mb-3">
-            {t.about.eyebrow}
-          </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-text-primary tracking-tight">
-            Wilson López
-          </h1>
+        <div className="mb-16 flex items-end gap-6">
+          <Portrait alt={t.about.photoAlt} />
+          <div>
+            <p className="text-xs font-semibold text-text-muted tracking-widest uppercase mb-3">
+              {t.about.eyebrow}
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-text-primary tracking-tight">
+              Wilson López
+            </h1>
+          </div>
         </div>
 
         {/* Two-column layout */}

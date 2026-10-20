@@ -3,14 +3,24 @@ export type Lang = "en" | "es";
 export interface T {
   nav: { projects: string; about: string; certifications: string; blog: string; contact: string };
   hero: { available: string; headline1: string; headline2: string; tagline: string; descPre: string; descMid: string; viewProjects: string; downloadCv: string };
-  about: { eyebrow: string; background: string; techStack: string; experience: string };
+  about: { eyebrow: string; background: string; techStack: string; experience: string; photoAlt: string };
   bio: { p1: string; p2: string; p3Pre: string; p3Post: string; p4: string; factLocation: string; factLocationVal: string; factAvailability: string; factAvailabilityVal: string; factLanguages: string; factLanguagesVal: string; factDegree: string; factDegreeVal: string };
   timeline: { current: string; present: string; more: string };
-  projects: { eyebrow: string; title: string; desc: string; privateProject: string; liveDemo: string; active: string; completed: string; inProgress: string };
+  projects: {
+    eyebrow: string; title: string; desc: string; privateProject: string; liveDemo: string; visitSite: string;
+    active: string; completed: string; inProgress: string; featured: string; personalProject: string;
+    problem: string; solution: string; result: string; empty: string;
+    filters: { all: string; enterprise: string; ai: string; saas: string; mobile: string };
+  };
   contact: { eyebrow: string; title: string; subtitle: string; location: string; locationMid: string };
   form: { name: string; email: string; message: string; messagePlaceholder: string; send: string; sending: string; successTitle: string; successSubtitle: string; sendAnother: string; errorMsg: string };
-  certifications: { eyebrow: string; title: string; desc: string; featured: string; total: string };
-  blog: { eyebrow: string; title: string; desc: string; empty: string; readArticle: string; medium: string; linkedin: string };
+  certifications: {
+    eyebrow: string; title: string; desc: string; featured: string; total: string;
+    viewAll: string; showFeatured: string; viewCredential: string;
+    types: Record<string, string>;
+    groups: Record<string, string>;
+  };
+  blog: { eyebrow: string; title: string; desc: string; empty: string; comingSoon: string; comingSoonDesc: string; readArticle: string; medium: string; linkedin: string };
 }
 
 export const translations: Record<Lang, T> = {
@@ -24,9 +34,9 @@ export const translations: Record<Lang, T> = {
     },
     hero: {
       available: "Available for remote roles",
-      headline1: "Senior Fullstack",
+      headline1: "Full-Stack",
       headline2: "Engineer.",
-      tagline: "AI & Security-focused · Building products that scale.",
+      tagline: "AI-powered products & secure software.",
       descPre: "6+ years designing and shipping enterprise and SaaS applications. Currently at",
       descMid: "working on Privileged Access Management. Based in Costa Rica",
       viewProjects: "View Projects",
@@ -37,6 +47,7 @@ export const translations: Record<Lang, T> = {
       background: "Background",
       techStack: "Tech Stack",
       experience: "Experience",
+      photoAlt: "Portrait of Wilson López",
     },
     bio: {
       p1: "I'm a Full-Stack Software Engineer with 6+ years of experience building enterprise and SaaS applications — from e-commerce mobile apps to ERP systems and AI-powered analytics platforms.",
@@ -49,7 +60,7 @@ export const translations: Record<Lang, T> = {
       factAvailability: "Availability",
       factAvailabilityVal: "Open to remote",
       factLanguages: "Languages",
-      factLanguagesVal: "Spanish (native) · English (C1)",
+      factLanguagesVal: "Spanish (native) · English (B2 certified · daily professional use)",
       factDegree: "Degree",
       factDegreeVal: "B.Sc. Computer Engineering",
     },
@@ -64,9 +75,23 @@ export const translations: Record<Lang, T> = {
       desc: "Enterprise applications, AI platforms, SaaS products, and mobile apps built over 6+ years across multiple industries.",
       privateProject: "Private project",
       liveDemo: "Live Demo →",
+      visitSite: "Visit site →",
       active: "Active",
       completed: "Completed",
       inProgress: "In Progress",
+      featured: "Featured",
+      personalProject: "Personal project",
+      problem: "Problem",
+      solution: "What I did",
+      result: "Result",
+      empty: "No projects in this category.",
+      filters: {
+        all: "All",
+        enterprise: "Enterprise",
+        ai: "AI",
+        saas: "SaaS",
+        mobile: "Mobile",
+      },
     },
     contact: {
       eyebrow: "Contact",
@@ -93,12 +118,37 @@ export const translations: Record<Lang, T> = {
       desc: "Academic degrees, professional certifications, and completed courses.",
       featured: "featured",
       total: "total",
+      viewAll: "View all",
+      showFeatured: "Show featured only",
+      viewCredential: "View credential →",
+      types: {
+        degree: "Degree",
+        certification: "Certification",
+        course: "Course",
+        participation: "Participation",
+      },
+      groups: {
+        education: "Education",
+        security: "Security",
+        architecture: "Architecture",
+        ai: "AI",
+        frontend: "Frontend",
+        backend: "Backend",
+        fullstack: "Fullstack",
+        methodology: "Methodology",
+        devops: "DevOps",
+        networking: "Networking",
+        language: "Languages",
+        "soft-skills": "Soft Skills",
+      },
     },
     blog: {
       eyebrow: "Writing",
       title: "Blog",
       desc: "Articles and thoughts on software engineering, AI, and building products — published on Medium and LinkedIn.",
       empty: "No posts yet. Check back soon.",
+      comingSoon: "Coming soon",
+      comingSoonDesc: "I'm writing about AI agents, secure software and building products. First posts are on the way.",
       readArticle: "Read article →",
       medium: "Medium",
       linkedin: "LinkedIn",
@@ -115,9 +165,9 @@ export const translations: Record<Lang, T> = {
     },
     hero: {
       available: "Disponible para roles remotos",
-      headline1: "Ingeniero Fullstack",
-      headline2: "Senior.",
-      tagline: "Enfocado en IA y Seguridad · Construyendo productos que escalan.",
+      headline1: "Ingeniero",
+      headline2: "Full-Stack.",
+      tagline: "Productos con IA y software seguro.",
       descPre: "6+ años diseñando y desarrollando aplicaciones enterprise y SaaS. Actualmente en",
       descMid: "trabajando en Gestión de Acceso Privilegiado. Costa Rica",
       viewProjects: "Ver Proyectos",
@@ -128,6 +178,7 @@ export const translations: Record<Lang, T> = {
       background: "Perfil",
       techStack: "Stack Tecnológico",
       experience: "Experiencia",
+      photoAlt: "Retrato de Wilson López",
     },
     bio: {
       p1: "Soy un Ingeniero de Software Full-Stack con 6+ años de experiencia construyendo aplicaciones enterprise y SaaS — desde apps móviles de e-commerce hasta sistemas ERP y plataformas de analítica con IA.",
@@ -140,7 +191,7 @@ export const translations: Record<Lang, T> = {
       factAvailability: "Disponibilidad",
       factAvailabilityVal: "Disponible para trabajo remoto",
       factLanguages: "Idiomas",
-      factLanguagesVal: "Español (nativo) · Inglés (C1)",
+      factLanguagesVal: "Español (nativo) · Inglés (B2 certificado · uso profesional diario)",
       factDegree: "Título",
       factDegreeVal: "Ing. en Computación",
     },
@@ -155,9 +206,23 @@ export const translations: Record<Lang, T> = {
       desc: "Aplicaciones enterprise, plataformas de IA, productos SaaS y apps móviles desarrolladas en 6+ años en múltiples industrias.",
       privateProject: "Proyecto privado",
       liveDemo: "Demo en vivo →",
+      visitSite: "Ver sitio →",
       active: "Activo",
       completed: "Completado",
       inProgress: "En Progreso",
+      featured: "Destacado",
+      personalProject: "Proyecto personal",
+      problem: "Problema",
+      solution: "Qué hice",
+      result: "Resultado",
+      empty: "No hay proyectos en esta categoría.",
+      filters: {
+        all: "Todos",
+        enterprise: "Enterprise",
+        ai: "IA",
+        saas: "SaaS",
+        mobile: "Móvil",
+      },
     },
     contact: {
       eyebrow: "Contacto",
@@ -184,12 +249,37 @@ export const translations: Record<Lang, T> = {
       desc: "Títulos académicos, certificaciones profesionales y cursos completados.",
       featured: "destacados",
       total: "en total",
+      viewAll: "Ver todas",
+      showFeatured: "Ver solo destacadas",
+      viewCredential: "Ver credencial →",
+      types: {
+        degree: "Título",
+        certification: "Certificación",
+        course: "Curso",
+        participation: "Participación",
+      },
+      groups: {
+        education: "Educación",
+        security: "Seguridad",
+        architecture: "Arquitectura",
+        ai: "IA",
+        frontend: "Frontend",
+        backend: "Backend",
+        fullstack: "Fullstack",
+        methodology: "Metodología",
+        devops: "DevOps",
+        networking: "Redes",
+        language: "Idiomas",
+        "soft-skills": "Habilidades blandas",
+      },
     },
     blog: {
       eyebrow: "Escritura",
       title: "Blog",
       desc: "Artículos y reflexiones sobre ingeniería de software, IA y construcción de productos — publicados en Medium y LinkedIn.",
       empty: "Sin publicaciones aún. Volvé pronto.",
+      comingSoon: "Próximamente",
+      comingSoonDesc: "Estoy escribiendo sobre agentes de IA, software seguro y construcción de productos. Los primeros artículos vienen en camino.",
       readArticle: "Leer artículo →",
       medium: "Medium",
       linkedin: "LinkedIn",

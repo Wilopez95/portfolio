@@ -1,6 +1,6 @@
 {
   "name": "Wilson López Rubi",
-  "title": "Senior Fullstack Software Engineer",
+  "title": "Full-Stack Engineer · AI-powered products & secure software",
   "tagline": "Building scalable web products with 6+ years of experience in React, Node.js, Spring Boot, and AWS — now focused on AI-powered applications.",
   "location": {
     "city": "Puriscal",
@@ -19,7 +19,7 @@
   "yearsOfExperience": 6,
   "languages": [
     { "language": "Spanish", "level": "native" },
-    { "language": "English", "level": "C1 — Professional Working Proficiency" }
+    { "language": "English", "level": "B2 certified · daily professional use" }
   ],
   "interests": [
     "AI Agents",

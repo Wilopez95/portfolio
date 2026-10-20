@@ -8,7 +8,7 @@ import { LogoSeal } from "./Logo";
 import { useLang } from "@/lib/LanguageContext";
 import { useState, useEffect } from "react";
 
-export function Navbar() {
+export function Navbar({ showBlog }: { showBlog: boolean }) {
   const pathname = usePathname();
   const { t } = useLang();
   const [scrolled, setScrolled] = useState(false);
@@ -18,7 +18,7 @@ export function Navbar() {
     { label: t.nav.projects, href: "/projects" },
     { label: t.nav.about, href: "/about" },
     { label: t.nav.certifications, href: "/certifications" },
-    { label: t.nav.blog, href: "/blog" },
+    ...(showBlog ? [{ label: t.nav.blog, href: "/blog" }] : []),
     { label: t.nav.contact, href: "/contact" },
   ];
 

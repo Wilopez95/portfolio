@@ -16,6 +16,21 @@
     "featured": true
   },
   {
+    "id": "claude-code-in-action",
+    "title": "Claude Code in Action",
+    "institution": "Anthropic",
+    "date": "2026-10",
+    "year": 2026,
+    "type": "certification",
+    "category": "ai",
+    "tags": ["ai", "agents", "claude", "llm"],
+    "credentialId": "srjmd5z9gaou",
+    "credentialUrl": null,
+    "file": null,
+    "showOnPortfolio": true,
+    "featured": true
+  },
+  {
     "id": "bachiller-educacion-media",
     "title": "High School Diploma (Bachiller en Educación Media)",
     "titleOriginal": "Bachiller en Educación Media",
@@ -60,7 +75,7 @@
     "credentialUrl": null,
     "file": "titulos/SCRUMstudy_Wilson_López.pdf",
     "showOnPortfolio": true,
-    "featured": true
+    "featured": false
   },
   {
     "id": "developing-secure-software",
@@ -123,7 +138,7 @@
     "credentialUrl": null,
     "file": "titulos/CertificadoDeFinalizacion_Software Architecture Breaking a Monolith into Microservices.pdf",
     "showOnPortfolio": true,
-    "featured": false,
+    "featured": true,
     "hours": 1.12
   },
   {

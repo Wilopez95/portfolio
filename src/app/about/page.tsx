@@ -4,7 +4,7 @@ import { AboutContent } from "./components/AboutContent";
 
 export const metadata: Metadata = {
   title: "About — Wilson López",
-  description: "Senior Fullstack Engineer with 6+ years of experience in enterprise and SaaS applications.",
+  description: "Full-Stack Engineer with 6+ years of experience in enterprise and SaaS applications.",
 };
 
 export default function Page() {
