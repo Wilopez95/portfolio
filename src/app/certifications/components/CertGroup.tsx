@@ -1,3 +1,6 @@
+"use client";
+
+import { useLang } from "@/lib/LanguageContext";
 import { CertCard } from "./CertCard";
 
 type Cert = {
@@ -12,27 +15,21 @@ type Cert = {
   hours?: number;
 };
 
-const GROUP_LABELS: Record<string, string> = {
-  education:    "Education",
-  security:     "Security",
-  architecture: "Architecture",
-  frontend:     "Frontend",
-  backend:      "Backend",
-  fullstack:    "Fullstack",
-  methodology:  "Methodology",
-  networking:   "Networking",
-  devops:       "DevOps",
-  language:     "Languages",
-};
-
 // Priority order for groups
 const GROUP_ORDER = [
-  "education", "security", "architecture",
+  "education", "security", "architecture", "ai",
   "frontend", "backend", "fullstack",
-  "methodology", "devops", "networking", "language",
+  "methodology", "devops", "networking", "language", "soft-skills",
 ];
 
+const rank = (category: string) => {
+  const i = GROUP_ORDER.indexOf(category);
+  return i === -1 ? GROUP_ORDER.length : i;
+};
+
 export function CertGroups({ certs }: { certs: Cert[] }) {
+  const { t } = useLang();
+
   const grouped = certs.reduce<Record<string, Cert[]>>((acc, cert) => {
     const key = cert.category;
     if (!acc[key]) acc[key] = [];
@@ -40,16 +37,14 @@ export function CertGroups({ certs }: { certs: Cert[] }) {
     return acc;
   }, {});
 
-  const sortedGroups = Object.keys(grouped).sort(
-    (a, b) => (GROUP_ORDER.indexOf(a) ?? 99) - (GROUP_ORDER.indexOf(b) ?? 99)
-  );
+  const sortedGroups = Object.keys(grouped).sort((a, b) => rank(a) - rank(b));
 
   return (
     <div className="space-y-12">
       {sortedGroups.map((category) => (
         <section key={category}>
           <h2 className="text-xs font-semibold text-text-muted tracking-widest uppercase mb-4">
-            {GROUP_LABELS[category] ?? category}
+            {t.certifications.groups[category] ?? category}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {grouped[category]

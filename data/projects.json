@@ -1,47 +1,63 @@
 [
   {
+    "id": "actas-cr",
+    "title": "ActasCR",
+    "slug": "actas-cr",
+    "position": "Will Costa Rica (Freelance) · Full-Stack Developer",
+    "role": "Lead",
+    "period": { "start": "2022-02", "end": null },
+    "status": "active",
+    "description": {
+      "en": {
+        "problem": "Boards and councils spend hours turning each session into formal minutes, and every organization has its own structure and language for them.",
+        "solution": "Built a SaaS on React and hapi.js/Node.js on AWS with AI transcription of sessions and LLM agents that draft the minutes following each organization's structure and language. Added role- and privilege-based access, SQL migrations and AWS Cognito authentication.",
+        "result": "Used by multiple organizations to run the full lifecycle of their minutes: drafting, review, approval and archival."
+      },
+      "es": {
+        "problem": "Juntas directivas y concejos dedican horas a convertir cada sesión en un acta formal, y cada organización tiene su propia estructura y lenguaje.",
+        "solution": "Construí un SaaS con React y hapi.js/Node.js en AWS, con transcripción de sesiones con IA y agentes LLM que redactan las actas según la estructura y el lenguaje de cada organización. Implementé acceso por roles y privilegios, migraciones SQL y autenticación con AWS Cognito.",
+        "result": "Lo usan múltiples organizaciones para todo el ciclo de sus actas: redacción, revisión, aprobación y archivo."
+      }
+    },
+    "stack": ["React", "Hapi.js", "Node.js", "AWS", "AWS Cognito", "PostgreSQL", "LLM"],
+    "categories": ["AI", "Agents", "SaaS"],
+    "links": {
+      "github": null,
+      "demo": null,
+      "website": "https://willcr.com/gestion-de-actas/",
+      "caseStudy": null
+    },
+    "featured": true,
+    "spotlight": true,
+    "public": false,
+    "image": null
+  },
+  {
     "id": "c-vpam",
     "title": "C/VPAM — Privileged Access Management",
     "slug": "c-vpam",
-    "company": "Imprivata",
-    "role": "Fullstack Engineer",
+    "position": "Imprivata · Software Engineer II",
+    "role": null,
     "period": { "start": "2024-09", "end": null },
     "status": "active",
-    "description": "Migration and creation of new Privilege Access Services applications, introducing features aligned with the latest security and compliance standards.",
-    "highlights": [
-      "Modern UI redesign improving usability and user adoption",
-      "Security and compliance-aligned feature development",
-      "Automated testing implementation reducing production issues"
-    ],
+    "description": {
+      "en": {
+        "problem": "Enterprises need to control and audit privileged access to critical systems, and the PAM platform's services had to be migrated and extended to meet current security and compliance standards.",
+        "solution": "Build features end-to-end, from the web UI (Next.js, MUI) to Java/Spring Boot services, with secure-by-design practices: threat modeling, secure coding and security-focused code reviews, working with distributed teams in the US.",
+        "result": "New PAM applications and compliance-aligned features shipped, backed by automated testing."
+      },
+      "es": {
+        "problem": "Las empresas necesitan controlar y auditar el acceso privilegiado a sistemas críticos, y los servicios de la plataforma PAM debían migrarse y ampliarse para cumplir los estándares actuales de seguridad y cumplimiento.",
+        "solution": "Desarrollo features de punta a punta, desde la UI web (Next.js, MUI) hasta servicios en Java/Spring Boot, con prácticas secure-by-design: threat modeling, código seguro y code reviews enfocados en seguridad, junto a equipos distribuidos en EE. UU.",
+        "result": "Nuevas aplicaciones PAM y features alineadas con cumplimiento en producción, respaldadas por pruebas automatizadas."
+      }
+    },
     "stack": ["Next.js", "Java", "Spring Boot", "MUI", "PostgreSQL"],
     "categories": ["Enterprise", "Security", "PAM"],
     "links": {
       "github": null,
       "demo": null,
-      "caseStudy": null
-    },
-    "featured": true,
-    "public": false,
-    "image": null
-  },
-  {
-    "id": "actas-cr",
-    "title": "ActasCR",
-    "slug": "actas-cr",
-    "company": "WILLCR (Freelancer)",
-    "role": "Fullstack Engineer (Lead)",
-    "period": { "start": "2022-01", "end": null },
-    "status": "active",
-    "description": "SaaS platform for board meeting management that optimizes the entire lifecycle of corporate minutes: creation, review, approval, and archival.",
-    "highlights": [
-      "Reduced administrative overhead for organizations managing board meetings",
-      "End-to-end ownership: architecture, development, and maintenance"
-    ],
-    "stack": ["React", "Hapi.js", "AWS", "PostgreSQL"],
-    "categories": ["SaaS", "Web App", "Enterprise"],
-    "links": {
-      "github": null,
-      "demo": null,
+      "website": "https://www.imprivata.com/products/privileged-access-security/privileged-access-management",
       "caseStudy": null
     },
     "featured": true,
@@ -52,20 +68,28 @@
     "id": "metrixbi",
     "title": "MetrixBi (COES)",
     "slug": "metrixbi",
-    "company": "Akurey",
-    "role": "Fullstack Engineer",
+    "position": "Akurey · Software Engineer",
+    "role": null,
     "period": { "start": "2024-01", "end": "2024-08" },
     "status": "completed",
-    "description": "AI-based application for social impact analysis, improving analysis accuracy for social sector organizations.",
-    "highlights": [
-      "Integrated AI/ML models for automated social impact measurement",
-      "Improved analysis accuracy over manual processes"
-    ],
+    "description": {
+      "en": {
+        "problem": "Social sector organizations measured their social impact through largely manual analysis.",
+        "solution": "Developed the application with React, Flask, AWS, PostgreSQL and DynamoDB, and integrated AI/ML models to automate impact measurement.",
+        "result": "Improved analysis accuracy over the manual process."
+      },
+      "es": {
+        "problem": "Organizaciones del sector social medían su impacto con análisis mayormente manuales.",
+        "solution": "Desarrollé la aplicación con React, Flask, AWS, PostgreSQL y DynamoDB, e integré modelos de IA/ML para automatizar la medición de impacto.",
+        "result": "Mayor precisión del análisis frente al proceso manual."
+      }
+    },
     "stack": ["React", "AWS", "PostgreSQL", "DynamoDB", "Flask"],
-    "categories": ["AI", "Data Analytics", "Social Impact", "Web App"],
+    "categories": ["AI", "Data Analytics", "Social Impact"],
     "links": {
       "github": null,
       "demo": null,
+      "website": "https://www.coescomunicacion.com/",
       "caseStudy": null
     },
     "featured": true,
@@ -76,21 +100,28 @@
     "id": "starlight-app",
     "title": "Starlight App",
     "slug": "starlight-app",
-    "company": "Akurey",
-    "role": "Fullstack Engineer (Lead)",
+    "position": "Akurey · Software Engineer",
+    "role": "Lead",
     "period": { "start": "2022-04", "end": "2023-06" },
     "status": "completed",
-    "description": "ERP for collection and recycling operations. Led end-to-end development and implementation, streamlining operations and reducing processing time.",
-    "highlights": [
-      "Led end-to-end development from zero to production",
-      "Streamlined recycling collection operations",
-      "Reduced processing time significantly enhancing overall efficiency"
-    ],
+    "description": {
+      "en": {
+        "problem": "A collection and recycling operation needed an ERP to manage its day-to-day operations.",
+        "solution": "Led end-to-end development, from zero to production, with React, TypeScript, Node.js, MongoDB and Docker, plus Exago for reporting.",
+        "result": "Streamlined collection operations and reduced processing time."
+      },
+      "es": {
+        "problem": "Una operación de recolección y reciclaje necesitaba un ERP para gestionar su operación diaria.",
+        "solution": "Lideré el desarrollo de punta a punta, desde cero hasta producción, con React, TypeScript, Node.js, MongoDB y Docker, más Exago para reportes.",
+        "result": "Operaciones de recolección más ágiles y menor tiempo de procesamiento."
+      }
+    },
     "stack": ["React", "TypeScript", "Node.js", "MongoDB", "Docker", "Exago"],
-    "categories": ["ERP", "Enterprise", "Web App"],
+    "categories": ["ERP", "Enterprise"],
     "links": {
       "github": null,
       "demo": null,
+      "website": "https://www.starlightsoftwaresolutions.com/",
       "caseStudy": null
     },
     "featured": true,
@@ -101,19 +132,28 @@
     "id": "microsoft-search",
     "title": "Microsoft Search Site",
     "slug": "microsoft-search",
-    "company": "Akurey",
-    "role": "Frontend Developer",
+    "position": "Akurey · Software Engineer",
+    "role": "Frontend",
     "period": { "start": "2021-10", "end": "2021-12" },
     "status": "completed",
-    "description": "Frontend development for the Microsoft Search Site.",
-    "highlights": [
-      "Worked on a high-profile Microsoft product"
-    ],
+    "description": {
+      "en": {
+        "problem": "The Microsoft Search Site needed frontend development.",
+        "solution": "Built frontend features with React, TypeScript and Bootstrap.",
+        "result": "Contributed to a high-profile Microsoft product."
+      },
+      "es": {
+        "problem": "El sitio de Microsoft Search necesitaba desarrollo frontend.",
+        "solution": "Desarrollé features de frontend con React, TypeScript y Bootstrap.",
+        "result": "Contribución a un producto de alto perfil de Microsoft."
+      }
+    },
     "stack": ["React", "TypeScript", "Bootstrap"],
     "categories": ["Frontend", "Enterprise"],
     "links": {
       "github": null,
       "demo": null,
+      "website": null,
       "caseStudy": null
     },
     "featured": false,
@@ -124,20 +164,28 @@
     "id": "unimart-mobile",
     "title": "Unimart Mobile App",
     "slug": "unimart-mobile",
-    "company": "Akurey",
-    "role": "Fullstack Engineer",
+    "position": "Akurey · Software Engineer",
+    "role": null,
     "period": { "start": "2021-03", "end": "2021-10" },
     "status": "completed",
-    "description": "E-commerce mobile application for Unimart, one of Costa Rica's major retailers. Optimized the sales process, increased sales, and improved app store ratings.",
-    "highlights": [
-      "Improved app store ratings through UX improvements",
-      "Optimized sales funnel increasing conversion"
-    ],
+    "description": {
+      "en": {
+        "problem": "Unimart, one of Costa Rica's major retailers, needed to optimize the sales process in its e-commerce mobile app.",
+        "solution": "Built the app with React Native, Redux, Firebase and Shopify, focusing on UX and the sales funnel.",
+        "result": "Higher sales and better app store ratings."
+      },
+      "es": {
+        "problem": "Unimart, uno de los principales retailers de Costa Rica, necesitaba optimizar el proceso de venta en su app móvil de e-commerce.",
+        "solution": "Desarrollé la app con React Native, Redux, Firebase y Shopify, con foco en la UX y el embudo de ventas.",
+        "result": "Más ventas y mejores calificaciones en las tiendas de apps."
+      }
+    },
     "stack": ["React Native", "Redux", "Firebase", "Shopify"],
     "categories": ["Mobile", "E-commerce"],
     "links": {
       "github": null,
       "demo": null,
+      "website": null,
       "caseStudy": null
     },
     "featured": false,
@@ -148,19 +196,31 @@
     "id": "whatsapp-agent",
     "title": "WhatsApp AI Agent",
     "slug": "whatsapp-agent",
-    "company": "Personal Project",
+    "position": null,
     "role": "Creator",
     "period": { "start": "2026-06", "end": null },
     "status": "in-progress",
-    "description": "AI agent connected to WhatsApp that handles customer service conversations and generates orders automatically.",
-    "highlights": [],
+    "description": {
+      "en": {
+        "problem": "Customer-service conversations and orders over WhatsApp are handled by hand.",
+        "solution": "Building an AI agent connected to WhatsApp that handles customer-service conversations and generates orders automatically.",
+        "result": "In progress."
+      },
+      "es": {
+        "problem": "Las conversaciones de servicio al cliente y los pedidos por WhatsApp se gestionan a mano.",
+        "solution": "Estoy construyendo un agente de IA conectado a WhatsApp que atiende conversaciones de servicio al cliente y genera pedidos automáticamente.",
+        "result": "En progreso."
+      }
+    },
     "stack": [],
     "categories": ["AI", "Agents", "WhatsApp", "SaaS"],
     "links": {
       "github": null,
       "demo": null,
+      "website": null,
       "caseStudy": null
     },
+    "_todo": ["stack", "links.github", "links.demo"],
     "featured": true,
     "public": true,
     "image": null

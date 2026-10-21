@@ -20,7 +20,13 @@ export function BlogContent({ posts }: { posts: Post[] }) {
         </div>
 
         {posts.length === 0 ? (
-          <p className="text-text-muted text-sm">{t.blog.empty}</p>
+          <div className="rounded-xl border border-dashed border-border bg-bg-card/50 px-6 py-16 text-center">
+            <span className="inline-flex items-center gap-2 px-2.5 py-1 rounded text-xs font-medium bg-bg-surface text-text-muted border border-border mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400/80" />
+              {t.blog.comingSoon}
+            </span>
+            <p className="text-text-secondary max-w-md mx-auto leading-relaxed">{t.blog.comingSoonDesc}</p>
+          </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (

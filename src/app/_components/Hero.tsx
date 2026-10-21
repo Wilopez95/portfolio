@@ -24,7 +24,7 @@ function CodeWindow() {
         <p className="pl-4">
           <span className="text-red-400">role</span>
           <span className="text-text-muted">: </span>
-          <span className="text-green-400">&quot;Senior Fullstack Engineer&quot;</span>
+          <span className="text-green-400">&quot;Full-Stack Engineer&quot;</span>
           <span className="text-text-muted">,</span>
         </p>
         <p className="pl-4">

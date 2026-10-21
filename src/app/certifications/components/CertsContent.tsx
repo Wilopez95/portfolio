@@ -1,18 +1,20 @@
 "use client";
 
+import { useState } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { CertGroups } from "./CertGroup";
 
 type Cert = {
   id: string; title: string; institution: string; year: number;
   type: string; category: string; credentialId: string | null;
-  credentialUrl: string | null; showOnPortfolio: boolean; hours?: number;
+  credentialUrl: string | null; featured: boolean; hours?: number;
 };
 
 export function CertsContent({ certs }: { certs: Cert[] }) {
   const { t } = useLang();
+  const [showAll, setShowAll] = useState(false);
+  const featuredCerts = certs.filter((c) => c.featured);
   const total = certs.length;
-  const featured = certs.filter((c) => c.showOnPortfolio).length;
 
   return (
     <div className="min-h-screen pt-24 pb-20">
@@ -27,11 +29,21 @@ export function CertsContent({ certs }: { certs: Cert[] }) {
           <p className="text-text-secondary max-w-xl leading-relaxed">
             {t.certifications.desc}{" "}
             <span className="text-text-muted">
-              {featured} {t.certifications.featured} · {total} {t.certifications.total}
+              {featuredCerts.length} {t.certifications.featured} · {total} {t.certifications.total}
             </span>
           </p>
         </div>
-        <CertGroups certs={certs} />
+
+        <CertGroups certs={showAll ? certs : featuredCerts} />
+
+        <div className="mt-12 flex justify-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-5 py-2.5 rounded-lg text-sm font-medium bg-bg-surface text-text-secondary border border-border hover:border-text-muted hover:text-text-primary transition-colors cursor-pointer"
+          >
+            {showAll ? t.certifications.showFeatured : `${t.certifications.viewAll} (${total})`}
+          </button>
+        </div>
       </div>
     </div>
   );

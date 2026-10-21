@@ -1,10 +1,34 @@
 "use client";
 
+import Image from "next/image";
 import { useLang } from "@/lib/LanguageContext";
 import type { Project } from "@/types";
 
+function ProjectMedia({ project, spotlight }: { project: Project; spotlight: boolean }) {
+  const frame = `relative overflow-hidden bg-bg-surface border-border ${
+    spotlight ? "aspect-[16/9] lg:aspect-auto lg:w-1/2 border-b lg:border-b-0 lg:border-r" : "aspect-[16/9] border-b"
+  }`;
+
+  // Screenshots are optional: set `image` in data/projects.json to show one
+  if (!project.image) return null;
+
+  return (
+    <div className={frame}>
+      <Image
+        src={project.image}
+        alt={project.title}
+        fill
+        sizes={spotlight ? "(min-width: 1024px) 40vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"}
+        className="object-cover object-top"
+      />
+    </div>
+  );
+}
+
 export function ProjectCard({ project }: { project: Project }) {
-  const { t } = useLang();
+  const { lang, t } = useLang();
+  const spotlight = !!project.spotlight;
+  const desc = project.description[lang];
 
   const STATUS_LABEL: Record<string, string> = {
     active: t.projects.active,
@@ -18,15 +42,26 @@ export function ProjectCard({ project }: { project: Project }) {
     "in-progress": "bg-blue-500/10 text-blue-600 dark:text-blue-400",
   };
 
+  const linkClass = "text-xs font-medium text-text-muted hover:text-text-primary transition-colors";
+
   return (
-    <article className="group flex flex-col bg-bg-card border border-border rounded-xl overflow-hidden hover:border-text-muted transition-colors duration-200">
-      <div className="h-0.5 w-full bg-border group-hover:bg-text-muted transition-colors duration-200" />
+    <article
+      className={`group flex flex-col bg-bg-card border border-border rounded-xl overflow-hidden hover:border-text-muted transition-colors duration-200 ${
+        spotlight ? "md:col-span-2 lg:flex-row" : ""
+      }`}
+    >
+      <ProjectMedia project={project} spotlight={spotlight} />
 
       <div className="flex flex-col flex-1 p-6 gap-4">
         {/* Tags + Status */}
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-wrap gap-1.5">
-            {project.categories.slice(0, 2).map((cat) => (
+            {spotlight && (
+              <span className="px-2 py-0.5 rounded text-xs font-medium bg-text-primary text-bg-primary">
+                {t.projects.featured}
+              </span>
+            )}
+            {project.categories.slice(0, spotlight ? 3 : 2).map((cat) => (
               <span key={cat} className="px-2 py-0.5 rounded text-xs font-medium bg-bg-surface text-text-muted border border-border">
                 {cat}
               </span>
@@ -39,12 +74,28 @@ export function ProjectCard({ project }: { project: Project }) {
 
         {/* Title */}
         <div>
-          <h3 className="text-base font-semibold text-text-primary leading-snug mb-1">{project.title}</h3>
-          <p className="text-xs text-text-muted">{project.company} · {project.role}</p>
+          <h3 className={`${spotlight ? "text-xl" : "text-base"} font-semibold text-text-primary leading-snug mb-1`}>
+            {project.title}
+          </h3>
+          <p className="text-xs text-text-muted">
+            {project.position ?? t.projects.personalProject}
+            {project.role && <span className="ml-2 px-1.5 py-px rounded border border-border">{project.role}</span>}
+          </p>
         </div>
 
-        {/* Description */}
-        <p className="text-sm text-text-secondary leading-relaxed flex-1">{project.description}</p>
+        {/* Problem → What I did → Result */}
+        <dl className="space-y-2.5 flex-1 text-sm leading-relaxed">
+          {([
+            [t.projects.problem, desc.problem],
+            [t.projects.solution, desc.solution],
+            [t.projects.result, desc.result],
+          ] as const).map(([label, text]) => (
+            <div key={label}>
+              <dt className="text-[11px] font-semibold text-text-muted tracking-widest uppercase mb-0.5">{label}</dt>
+              <dd className="text-text-secondary">{text}</dd>
+            </div>
+          ))}
+        </dl>
 
         {/* Stack */}
         {project.stack.length > 0 && (
@@ -59,17 +110,22 @@ export function ProjectCard({ project }: { project: Project }) {
 
         {/* Links */}
         <div className="flex items-center gap-4 pt-2 border-t border-border">
+          {project.links.website && (
+            <a href={project.links.website} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              {t.projects.visitSite}
+            </a>
+          )}
           {project.links.github && (
-            <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-text-muted hover:text-text-primary transition-colors">
+            <a href={project.links.github} target="_blank" rel="noopener noreferrer" className={linkClass}>
               GitHub →
             </a>
           )}
           {project.links.demo && (
-            <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-text-muted hover:text-text-primary transition-colors">
+            <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
               {t.projects.liveDemo}
             </a>
           )}
-          {!project.links.github && !project.links.demo && (
+          {!project.links.website && !project.links.github && !project.links.demo && (
             <span className="text-xs text-text-muted italic">{t.projects.privateProject}</span>
           )}
         </div>

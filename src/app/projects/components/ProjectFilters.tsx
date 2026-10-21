@@ -1,25 +1,30 @@
 "use client";
 
+import { useLang } from "@/lib/LanguageContext";
+
+export type FilterKey = "all" | "enterprise" | "ai" | "saas" | "mobile";
+
 interface ProjectFiltersProps {
-  categories: string[];
-  active: string;
-  onChange: (cat: string) => void;
+  filters: FilterKey[];
+  active: FilterKey;
+  onChange: (filter: FilterKey) => void;
 }
 
-export function ProjectFilters({ categories, active, onChange }: ProjectFiltersProps) {
+export function ProjectFilters({ filters, active, onChange }: ProjectFiltersProps) {
+  const { t } = useLang();
   return (
     <div className="flex flex-wrap gap-2">
-      {categories.map((cat) => (
+      {filters.map((key) => (
         <button
-          key={cat}
-          onClick={() => onChange(cat)}
+          key={key}
+          onClick={() => onChange(key)}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
-            active === cat
+            active === key
               ? "bg-text-primary text-bg-primary"
               : "bg-bg-surface text-text-secondary border border-border hover:border-text-muted hover:text-text-primary"
           }`}
         >
-          {cat}
+          {t.projects.filters[key]}
         </button>
       ))}
     </div>

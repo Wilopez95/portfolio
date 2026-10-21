@@ -1,3 +1,7 @@
+"use client";
+
+import { useLang } from "@/lib/LanguageContext";
+
 type Cert = {
   id: string;
   title: string;
@@ -10,17 +14,11 @@ type Cert = {
   hours?: number;
 };
 
-const TYPE_LABEL: Record<string, string> = {
-  degree:        "Degree",
-  certification: "Certification",
-  course:        "Course",
-  participation: "Participation",
-};
-
 const CATEGORY_ICON: Record<string, string> = {
   education:    "🎓",
   security:     "🔐",
   architecture: "🏗️",
+  ai:           "✨",
   frontend:     "⚛️",
   backend:      "⚙️",
   fullstack:    "🔧",
@@ -32,8 +30,9 @@ const CATEGORY_ICON: Record<string, string> = {
 };
 
 export function CertCard({ cert }: { cert: Cert }) {
+  const { t } = useLang();
   const icon = CATEGORY_ICON[cert.category] ?? "📄";
-  const typeLabel = TYPE_LABEL[cert.type] ?? cert.type;
+  const typeLabel = t.certifications.types[cert.type] ?? cert.type;
 
   return (
     <article className="flex gap-4 p-5 rounded-xl border border-border bg-bg-card hover:border-text-muted transition-colors group">
@@ -67,7 +66,7 @@ export function CertCard({ cert }: { cert: Cert }) {
               rel="noopener noreferrer"
               className="text-xs text-text-muted hover:text-text-primary underline underline-offset-2 transition-colors shrink-0"
             >
-              View credential →
+              {t.certifications.viewCredential}
             </a>
           )}
           {cert.credentialId && !cert.credentialUrl && (
