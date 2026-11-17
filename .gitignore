@@ -39,3 +39,8 @@ coverage/
 # Misc
 *.log
 .vercel
+.env*
+!.env.example
+
+# cv-builder skill working files (contain personal data)
+.cv-work/
