@@ -186,6 +186,20 @@ Without `RESEND_API_KEY`, submissions are only logged to console (useful for loc
 
 ---
 
+## Private CV Builder (`/admin/cv`)
+
+This area is hidden. Nothing links to it, and it is served with `noindex`. Only the
+`ADMIN_PASSWORD` gets you in. A successful login sets a signed, httpOnly cookie that lasts 7 days.
+
+- **Dashboard:** lists CV requests with a Pending or Ready status. From there you can download the PDF and DOCX files, view the answers, or duplicate a request as the base for a new one.
+- **New CV:** a 9-step form. You can attach an existing CV, the job posting and a photo (4 MB in total). Submitting saves the request to a **private** Vercel Blob store and emails it through Resend.
+- **Generation:** in Claude Code, run `/cv-builder <request-id>`. The skill in `.claude/skills/cv-builder/` writes the CV following the HR playbook in `references/`, renders the PDF (headless Chrome) and the DOCX, uploads both, and marks the request Ready.
+
+Required env vars: `ADMIN_PASSWORD`, `BLOB_READ_WRITE_TOKEN` (plus `RESEND_API_KEY` / `CONTACT_EMAIL` for the email).
+Locally, get them with `vercel env pull`. The skill also needs Google Chrome installed.
+
+---
+
 ## Brand Assets
 
 All brand files are in `public/brand/`:
